@@ -50,7 +50,7 @@ class Config:
             ) from None
 
         use_llm_provider = _env("USE_LLM_PROVIDER", "false").lower() == "true"
-        llm_provider_url = _env("LLM_PROVIDER_URL", "")
+        llm_provider_url = _env("LLM_PROVIDER_URL", "").strip()
         llm_provider_key = _env("LLM_PROVIDER_KEY", "")
 
         if use_llm_provider:
